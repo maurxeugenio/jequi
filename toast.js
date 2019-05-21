@@ -17,7 +17,7 @@ toastr.options = {
     "hideMethod": "fadeOut"
 }
 
-let url = 'http://localhost:3000/list.json';
+let url = 'https://rawcdn.githack.com/maurxeugenio/jequi/34195f2e13827c3870d0caed44d62a3eb78115a5/list.json';
 var list_names, name;
 
 $.getJSON(url, function(json){
