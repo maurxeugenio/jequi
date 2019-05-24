@@ -24,6 +24,18 @@ $.getJSON(url, function(json){
     list_names = json;
 });
 
+let show;
+var peoples = 271;
+
+function info(){
+    show = Boolean(Math.round(Math.random()));
+
+    if (show===true && peoples <= 330){
+        peoples = Math.floor(Math.random() * (332 - peoples) ) + peoples;
+        toastr.info('Nas últimas 24h', `${peoples} se cadastraram`)
+    }
+}
+
 function jequi() {
     var min = 15, max = 35;
     var rand = Math.floor(Math.random() * (max - min + 1) + min); //Generate Random number between 5 - 10
@@ -33,9 +45,11 @@ function jequi() {
         toastr.success( `${rand-5} minutos atrás`, `${name} ${call}`)
     }
 
-    if ( rand < 20 && warning !== undefined ){
-        toastr.warning(warning)
+    if ( rand < 20 && warning !== undefined){
+        var quant_people = Math.floor(Math.random() * (37 - 23 + 1) + 1)
+        toastr.warning(`${quant_people} ${warning}`)
     }
 
     setTimeout(jequi, rand * 1000)
+    info(peoples)
 }

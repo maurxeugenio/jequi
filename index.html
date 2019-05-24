@@ -2,8 +2,9 @@
 <html lang="pt-BR" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <title>Teste Jequi</title>
+    <title>Jequi</title>
     <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <style media="screen">
@@ -11,7 +12,21 @@
             font-family: sans-serif;
         }
     </style>
-    <h1>Teste, em alguns segundos a mágica ocorre.</h1>
+    <div class="container">
+        <div class="header">
+            <img class="shrimp" src="shrimp.svg" alt="Camarão">
+            <h1>jequi</h1>
+        </div>
+        <div class="camp-field">
+            <input type="text" placeholder="Tempo minimo" name="" value="">
+            <input type="text" placeholder="Tempo máximo" name="" value="">
+            <input type="text" placeholder="Chamada" name="" value="">
+            <input type="text" placeholder="Warning" name="" value="">
+            <input type="text" placeholder="Tempo info  " name="" value="">
+            <input type="text" placeholder="Informação" name="" value="">
+            <input type="button" name="make-code" value="Gerar code">
+        </div>
+    </div>
     <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -22,8 +37,11 @@
     <script type="text/javascript" src="toast.js"></script>
 
     <script type="text/javascript">
-        var call = 'comprou o livro!';
-        var warning = 'Últimas unidades';
+        var call = 'acabou de se cadastrar!';
+        var warning = 'pessoas estão na página neste momento.'
+        var info_call = 'pessoas se cadastraram';
+        var info_time = 'Nas últimas 24 horas';
+
         jequi()
     </script>
 </body>
