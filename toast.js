@@ -31,12 +31,12 @@ function info(){
 
     if (show===true && peoples <= (peoples_max-2)){
         peoples = Math.floor(Math.random() * (peoples_max - peoples) ) + peoples;
-        toastr.info('Nas últimas 24h', `${peoples} se cadastraram`)
+        toastr.info(`${info_time}`, `${peoples} ${info_call}`)
     }
 }
 
 function jequi() {
-    var min = 15, max = 35;
+    var min = spacetime_init, max = spacetime_end;
     var rand = Math.floor(Math.random() * (max - min + 1) + min); //Generate Random number between 5 - 10
 
     if(list_names !== undefined){
