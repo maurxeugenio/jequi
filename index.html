@@ -8,9 +8,9 @@
 </head>
 <body>
     <style media="screen">
-        *{
-            font-family: sans-serif;
-        }
+    *{
+        font-family: sans-serif;
+    }
     </style>
     <div class="container">
         <div class="header">
@@ -27,16 +27,22 @@
             <input type="button" name="make-code" value="Gerar code">
         </div>
     </div>
+
     <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
-
+    <!-- caso já tenha jquery na página remova o código acima! --> 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-    <script type="text/javascript" src="toast.js"></script>
+    <script type="text/javascript" src="https://rawcdn.githack.com/maurxeugenio/jequi/29f578840276a355cad6a94bc12e42a5a3a02315/toast.js"></script>
+
 
     <script type="text/javascript">
+        var peoples = 271;
+        var peoples_max = 330;
+        var people_on_min = 1;
+        var people_on_max = 30;
         var call = 'acabou de se cadastrar!';
         var warning = 'pessoas estão na página neste momento.'
         var info_call = 'pessoas se cadastraram';

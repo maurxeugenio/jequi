@@ -25,13 +25,12 @@ $.getJSON(url, function(json){
 });
 
 let show;
-var peoples = 271;
 
 function info(){
     show = Boolean(Math.round(Math.random()));
 
-    if (show===true && peoples <= 330){
-        peoples = Math.floor(Math.random() * (332 - peoples) ) + peoples;
+    if (show===true && peoples <= (peoples_max-2)){
+        peoples = Math.floor(Math.random() * (peoples_max - peoples) ) + peoples;
         toastr.info('Nas últimas 24h', `${peoples} se cadastraram`)
     }
 }
@@ -46,10 +45,13 @@ function jequi() {
     }
 
     if ( rand < 20 && warning !== undefined){
-        var quant_people = Math.floor(Math.random() * (37 - 23 + 1) + 1)
+        var quant_people = Math.floor(Math.random() * (people_on_max - people_on_min + 1) + 1);
+
         toastr.warning(`${quant_people} ${warning}`)
     }
 
     setTimeout(jequi, rand * 1000)
-    info(peoples)
+    if (peoples!== undefined) {
+        info(peoples)
+    }
 }
