@@ -6,7 +6,7 @@
 ### Requirementos
 - jquery
 - toastr
-- jqequi
+- jequi
 
 ``` js
 <script
